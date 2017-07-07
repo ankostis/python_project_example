@@ -1,9 +1,7 @@
 {% extends "!layout.html" %}
 {%- set extra_css_files = ['_static/css/eu.css'] %}
 
-{% block sidebartitle %}
-  <div class="eu-logo">
-    <img src="{{ pathto('_static/eu_logo.png', 1) }}" />
-  </div>
+{%- block extrahead %}
+  <meta name="theme-color" content="#cccc00">
   {{ super() }}
 {% endblock %}

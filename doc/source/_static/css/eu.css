@@ -1,6 +1,9 @@
-﻿.eu-logo img {
-  border-radius: 0;
-  width: 160px;
-  width: initial;
-  height: 140px;
+﻿.eu-logo {
+  text-align:center;
+  margin-bottom: 5%;
+}
+
+.wy-breadcrumbs {
+  font-family: "EC Square Sans Pro", Garamond, sans-serif;
+  font-stretch: condensed;
 }

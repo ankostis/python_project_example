@@ -1,0 +1,14 @@
+{% extends "!breadcrumbs.html" %}
+
+{% block breadcrumbs %}
+  <div class="eu-logo">
+    <img src="{{ pathto('_static/eu_logo.png', 1) }}" />
+  </div>
+  <li><a href="http://ec.europa.eu/index_en.htm">European Commission</a>&Rang;</li>
+    <li><a href="https://ec.europa.eu/jrc">JRC</a>&Rang;</li>
+    <li><a href="{{ pathto(master_doc) }}">co2mpas</a>&Rang;</li>
+    {% for doc in parents %}
+      <li><a href="{{ doc.link|e }}">{{ doc.title }}</a>&Rang;</li>
+    {% endfor %}
+    <li>{{ title }}</li>
+{% endblock %}
