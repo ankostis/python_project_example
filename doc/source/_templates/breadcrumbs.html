@@ -1,14 +1,21 @@
 {% extends "!breadcrumbs.html" %}
 
 {% block breadcrumbs %}
-  <div class="eu-logo">
-    <img src="{{ pathto('_static/eu_logo.png', 1) }}" />
+<div id="layout-header">
+  <div class="container">
+    <img alt="European Commission logo" id="banner-flag" src="{{ pathto('_static/eu_logo.png', 1) }}">
+    <div id="main-title">EU Science Hub</div>
+    <div id="sub-title" class="hidden-xs">The European Commission's science and knowledge service</div>
   </div>
+</div>
+
+<div id="path">
   <li><a href="http://ec.europa.eu/index_en.htm">European Commission</a>&Rang;</li>
     <li><a href="https://ec.europa.eu/jrc">JRC</a>&Rang;</li>
-    <li><a href="{{ pathto(master_doc) }}">co2mpas</a>&Rang;</li>
+    <li><a href="{{ pathto(master_doc) }}">{{ project }}</a>&Rang;</li>
     {% for doc in parents %}
       <li><a href="{{ doc.link|e }}">{{ doc.title }}</a>&Rang;</li>
     {% endfor %}
     <li>{{ title }}</li>
+</div>
 {% endblock %}
